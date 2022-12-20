@@ -6,64 +6,85 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>TicketPrice</title>
             
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
             <link rel="stylesheet" href="css/style.css">
       </head>
       <body>
             
-            <div id="my_form">
+            <div id="my_form" class="container">
+                  <h2 class="text-center text-white text-uppercase my-3 text-wine">Calcola il prezzo del tuo biglietto</h2>
 
-                  <div>
-                        <label for="name">Nome Cognome</label>
-                        <input id="name" type="text" placeholder="Inserisci nome e cognome">  
+                  <div class="row bg-white rounded">
+                        <div class="d-flex justify-content-center">
+                              <div class="text-center m-4">
+                                    <label for="name" class="form-label text-wine">Nome Cognome</label>
+                                    <input id="name" class="form-control" type="text" placeholder="Inserisci nome e cognome">  
+                              </div>
+                        
+                              <div class="text-center m-4">
+                                    <label for="km" class="form-label text-wine">Km da percorrere</label>
+                                    <input id="km" class="form-control" type="number" placeholder="Inserisci chilometri">
+                              </div>
+                        
+                              <div class="text-center m-4">
+                                    <label for="age" class="form-label text-wine">Fascia d'età</label>
+                                    <select id="age" class="form-select">
+                                          <option value="under">Minorenne</option>
+                                          <option value="adult">Maggiorenne</option>
+                                          <option value="over">Over 65</option>
+                                    </select>
+                              </div>
+                        </div>
+            
+                        <div class="d-flex justify-content-center">
+                              <button id="submit-button" class="btn m-3 text-wine border-secondary bg-light" type="submit">
+                                    Genera
+                              </button>
+                              
+                              <button id="reset-button" class="btn m-3 text-wine border-secondary bg-light" type="reset">
+                                    Annulla
+                              </button>
+                        </div>
                   </div>
-      
-                  <div>
-                        <label for="km">Km da percorrere</label>
-                        <input id="km" type="text" placeholder="Inserisci chilometri">
+
+                 <h2 class="text-center text-white text-uppercase my-3 text-wine">Il tuo biglietto</h2>
+
+                  <div class="row bg-white p-4">
+
+                        <h3 class="text-uppercase">Dettaglio passeggeri</h3>
+
+                        <div class="row">
+                              <div class="col-4 bg-grey p-4">
+                                    <h4 class="text-uppercase">Nome passeggero</h4>
+                                    <p id="name-output" class="text-uppercase"></p>
+                              </div>
+            
+                              <div class="col">
+                                    <div class="row p-2 border-grey">
+                                          <div class="col">
+                                                <h5>Offerta</h5>
+                                                <p id="discount-output" class="align-self-end"></p>
+                                          </div>
+                        
+                                          <div class="col">
+                                                <h5>Carrozza</h5>
+                                                <p id="cab-output" class="align-self-end"></p>
+                                          </div>
+                        
+                                          <div class="col">
+                                                <h5>Codice CP</h5>
+                                                <p id="cp-output" class="align-self-end"></p>
+                                          </div>
+                        
+                                          <div class="col">
+                                                <h5>Costo biglietto</h5>
+                                                <p id="price-output" class="align-self-end"></p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                        </div>
                   </div>
-      
-                  <div>
-                        <label for="age">Fascia d'età</label>
-                        <select id="age">
-                              <option value="under">Minorenne</option>
-                              <option value="adult">Maggiorenne</option>
-                              <option value="over">Over 65</option>
-                        </select>
-                  </div>
-      
-                  <button id="submit-button" type="submit">
-                        Genera
-                  </button>
-                  
-                  <button id="reset-button" type="reset">
-                        Annulla
-                  </button>
-
-            </div>
-
-            <div>
-                  <h3>NOME PASSEGGERO</h3>
-                  <p id="name-output"></p>
-            </div>
-
-            <div>
-                  <h3>Offerta</h3>
-                  <p id="discount-output"></p>
-            </div>
-
-            <div>
-                  <h3>Carrozza</h3>
-                  <p id="cab-output"></p>
-            </div>
-
-            <div>
-                  <h3>Codice CP</h3>
-                  <p id="cp-output"></p>
-            </div>
-
-            <div>
-                  <h3>Costo biglietto</h3>
-                  <p id="price-output"></p>
             </div>
             
             <script type="text/javascript" src="js/scripts.js"></script>

@@ -1,7 +1,16 @@
-/* RESET  */
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+body {
+      background-color: #b91450;
+      font-family: Arial, Helvetica, sans-serif;
 }
 
+.text-wine {
+      color: #b91450;
+}
+
+.bg-grey {
+      background-color: grey;
+}
+
+.border-grey {
+      border: 1px solid grey;
+}
