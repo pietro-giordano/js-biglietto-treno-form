@@ -4,13 +4,67 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <title>TicketPrice</title>
             
             <link rel="stylesheet" href="css/style.css">
       </head>
       <body>
             
-            
+            <!-- <form action=""> -->
+
+                  <div>
+                        <label for="name">Nome Cognome</label>
+                        <input id="name" type="text" placeholder="Inserisci nome e cognome">  
+                  </div>
+      
+                  <div>
+                        <label for="km">Km da percorrere</label>
+                        <input id="km" type="number" placeholder="Inserisci chilometri">
+                  </div>
+      
+                  <div>
+                        <label for="age">Fascia d'età</label>
+                        <select id="age">
+                              <option value="under">Minorenne</option>
+                              <option value="adult">Maggiorenne</option>
+                              <option value="over">Over 65</option>
+                        </select>
+                  </div>
+      
+                  <button id="submit-button">
+                        Genera
+                  </button>
+                  
+                  <button id="reset-button">
+                        Annulla
+                  </button>
+
+            <!-- </form> -->
+
+            <div>
+                  <h3>NOME PASSEGGERO</h3>
+                  <p id="name-output"></p>
+            </div>
+
+            <div>
+                  <h3>Offerta</h3>
+                  <p id="discount-output"></p>
+            </div>
+
+            <div>
+                  <h3>Carrozza</h3>
+                  <p id="cab-output"></p>
+            </div>
+
+            <div>
+                  <h3>Codice CP</h3>
+                  <p id="cp-output"></p>
+            </div>
+
+            <div>
+                  <h3>Costo biglietto</h3>
+                  <p id="price-output"></p>
+            </div>
             
             <script type="text/javascript" src="js/scripts.js"></script>
       </body>
