@@ -7,10 +7,15 @@ body {
       color: #b91450;
 }
 
+.border-wine {
+      border-color: #b91450;
+}
+
 .bg-grey {
       background-color: grey;
 }
 
 .border-grey {
-      border: 1px solid grey;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
 }

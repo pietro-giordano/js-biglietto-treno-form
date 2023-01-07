@@ -8,6 +8,7 @@ const discountOutput = document.getElementById('discount-output');
 const cabOutput = document.getElementById('cab-output');
 const cpOutput = document.getElementById('cp-output');
 const priceOutput = document.getElementById('price-output');
+const dnone = document.querySelectorAll('.d-none');
 
 submitButton.addEventListener('click',
 
@@ -26,24 +27,40 @@ submitButton.addEventListener('click',
             if (ageSelect.value == 'under') {
                   nameOutput.innerHTML = nameInput.value;
                   discountOutput.innerHTML = 'Sconto Minorenni';
-                  cabOutput.innerHTML = Math.floor(Math.random() * 10);
+                  cabOutput.innerHTML = Math.floor(Math.random() * 10) + 1;
                   cpOutput.innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
                   priceOutput.innerHTML = priceTicketUnder.toFixed(2) + '€';
             }
             else if (ageSelect.value == 'over') {
                   nameOutput.innerHTML = nameInput.value;
                   discountOutput.innerHTML = 'Sconto Over 65';
-                  cabOutput.innerHTML = Math.floor(Math.random() * 10);
+                  cabOutput.innerHTML = Math.floor(Math.random() * 10) + 1;
                   cpOutput.innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
                   priceOutput.innerHTML = priceTicketOver.toFixed(2) + '€';
             }
             else {
                   nameOutput.innerHTML = nameInput.value;
                   discountOutput.innerHTML = 'Biglietto Standard';
-                  cabOutput.innerHTML = Math.floor(Math.random() * 10);
+                  cabOutput.innerHTML = Math.floor(Math.random() * 10) + 1;
                   cpOutput.innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
                   priceOutput.innerHTML = priceTicket.toFixed(2) + '€';
             }
+
+            for (i = 0; i < dnone.length; i++) {
+                  
+                  dnone[i].classList.remove('d-none');
+
+            }
+
+      }
+
+)
+
+resetButton.addEventListener('click',
+
+      function () {
+
+            window.location.reload();
 
       }
 
